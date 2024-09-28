@@ -46,7 +46,7 @@ app.use(
 );
 
 // CONNEXION A LA BASE DE DONNEES
-const Bdd = mysql.createConnection({ options });
+const Bdd = mysql.createConnection(options);
 
 // STOCKAGE DES FICHIERS (IMAGES) des articles
 const stockageImageArticle = multer.diskStorage({
