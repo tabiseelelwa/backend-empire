@@ -25,10 +25,9 @@ app.use(express.static("public"));
 
 const options = {
   host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "",
-  database: "fizitech",
+  user: "c2413927c_empereur",
+  password: "{G1t9!gIT{+z",
+  database: "c2413927c_fizitech",
 };
 
 const sessionStore = new MySQLStore(options);
@@ -47,12 +46,7 @@ app.use(
 );
 
 // CONNEXION A LA BASE DE DONNEES
-const Bdd = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "fizitech",
-});
+const Bdd = mysql.createConnection({ options });
 
 // STOCKAGE DES FICHIERS (IMAGES) des articles
 const stockageImageArticle = multer.diskStorage({
